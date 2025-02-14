@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+
+#cellules{
+    
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#cellules::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(src/saxophone.png) repeat 0 0;
+    background-size: 50px;
+    opacity: 0.1; 
+    z-index: -1; 
+    animation: move-saxo 20s linear infinite;
+}
+
+@keyframes move-saxo {
+    0%{
+        background-position: 0% 0%;
+    }
+    100%{
+        background-position: -90% -100%;
+    }
+    
+}
+
+
+.cbox{
+    border: 2px solid #FBFFFE;
+    border-radius: 10px;
+    background-color: #1B1B1E;
+    width: 200px;
+    height: 400px;
+    margin-top: 75px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: 0.6s;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.cbox::after{
+    content: '?';
+    position: absolute;
+    color: #FBFFFE;
+    font-size: 72px;
+    opacity: 0.1;
+}
+
+.cbox:hover::after{
+    opacity: 0;
+}
+
+
+.box-title{
+    color: #FAA916;
+    font-family: "Delicious Handrawn", serif;
+    font-size: 36px;
+
+}
+.box-content{
+    color:#FBFFFE;
+    font-family: "Delicious Handrawn", serif;
+    font-size: 20px;
+    height: 350px;
+    width: 80%;
+}
+#contentB{
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 3;
+
+}
+
+#contentB:hover{
+   opacity: 1;
+}
+.cbox:hover{
+    scale: 1.1;
+    margin-left: 7px;
+    margin-right: 7px;
+}

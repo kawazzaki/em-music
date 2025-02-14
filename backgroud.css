@@ -1,0 +1,27 @@
+body {
+    background-color: #FAA916; 
+    
+}
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('src/background-core.png') repeat 0 0;
+    background-size: 50px;
+    opacity: 0.1; 
+    z-index: -1; 
+    animation: move 20s linear infinite;
+}
+
+@keyframes move {
+    0%{
+        background-position: 0% 0%;
+    }
+    100%{
+        background-position: 90% 100%;
+    }
+    
+}
